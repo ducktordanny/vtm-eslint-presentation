@@ -1,0 +1,17 @@
+{
+  "name": "presentation",
+  "version": "0.0.0",
+  "author": "Daniel Lazar",
+  "license": "MIT",
+  "scripts": {
+    "dev": "reveal-md slides.md -w --disable-auto-open",
+    "build": "rm -rf dist && mkdir dist && cp -r assets dist/assets && reveal-md slides.md --static dist --assets-dir assets && touch dist/.nojekyll",
+    "deploy": "yarn build && gh-pages -d dist",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "husky": "^8.0.3",
+    "reveal-md": "^5.4.1"
+  }
+}
