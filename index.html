@@ -16,23 +16,71 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template"># ESLint Plugins, rules and create your own
-</script></section><section ><section data-markdown><script type="text/template">
-## What is ESLint
+      <div class="slides"><section ><section data-markdown><script type="text/template"># ESLint Plugins, rules and create your own
 </script></section><section data-markdown><script type="text/template">
-## ESLint
+### Who Am I?
 
-Statically analyzes your ECMAScript/JavaScript code to quickly find problems.
-
-- Identify issues -> Less bugs
-- Fix problems automatically
-- Stricten code style -> More consistent code
+- Software Engineer @ One Identity
+- Like to work on own project ideas
+- Like to ride bike
+- Etc.
+</script></section></section><section ><section data-markdown><script type="text/template">
+## What is ESLint?
 </script></section><section data-markdown><script type="text/template">
-## Plugins
+### ESLint
+
+- A configurable JavaScript linter
+- Helps you find and fix problems
+  - Potential runtime bugs
+  - Not following best practices
+  - Styling issues
+
+![Linter example](./assets/console-log-lint.png)
+</script></section><section data-markdown><script type="text/template">
+### Rules
+
+Building block of ESLint
+
+![Rules](./assets/rules.gif)
+</script></section><section data-markdown><script type="text/template">
+### Rules
+
+- Validates code to meet certain expectation
+- What to do if it doesn't meet the expectation
+- Can also contain additional configuration
+
+![Linter example](./assets/console-log-lint.png)
+</script></section><section data-markdown><script type="text/template">
+### Plugins
 
 An npm module that can contain a set of ESLint rules, configurations, processors, and environments.
+
+A common use case is to enforce best practices. E.g.:
+
+- [@angular-eslint/eslint-plugin](https://www.npmjs.com/package/@angular-eslint/eslint-plugin)
+- [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
+</script></section></section><section ><section data-markdown><script type="text/template">
+## How rules work?
 </script></section><section data-markdown><script type="text/template">
-## Rules
+### Parsers
+
+- AST (Abstract Syntax Tree)
+- Espree
+</script></section><section data-markdown><script type="text/template">
+### AST
+
+```py
+while b != 0:
+    if a > b:
+        a = a - b
+    else:
+        b = b - a
+return a
+```
+
+![AST example](./assets/ast-example.png)
+</script></section><section data-markdown><script type="text/template">
+### Espree
 </script></section></section><section  data-markdown><script type="text/template">
 ## Example
 
@@ -40,7 +88,7 @@ Btw this should be an example slide for ya
 
 ![Example image](./assets/image-example.png)
 
-For ATS use [astexplorer.net](https://astexplorer.net/) somewhere
+For AST use [astexplorer.net](https://astexplorer.net/) somewhere
 </script></section></div>
     </div>
 

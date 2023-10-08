@@ -1,4 +1,9 @@
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
   text-transform: none !important;
 }
 
@@ -6,6 +11,7 @@
   max-height: 400px !important;
   max-width: 500px !important;
   border-radius: 8px !important;
+  background-color: lightgray;
 }
 
 .reveal code {
