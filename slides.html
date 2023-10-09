@@ -49,6 +49,29 @@ Building block of ESLint
 
 ![Linter example](./assets/console-log-lint.png)
 </script></section><section data-markdown><script type="text/template">
+### Config file
+
+- Several formats are supported
+
+```json
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-console": ["warn", { "allow": ["clear", "table", "debug", "error"] }]
+  }
+}
+```
+</script></section><section data-markdown><script type="text/template">
 ### Plugins
 
 An npm module that can contain a set of ESLint rules, configurations, processors, and environments.
@@ -69,16 +92,74 @@ A common use case is to enforce best practices. E.g.:
 
 ```py
 while b != 0:
-    if a > b:
-        a = a - b
-    else:
-        b = b - a
+  if a > b:
+    a = a - b
+  else:
+    b = b - a
 return a
 ```
 
 ![AST example](./assets/ast-example.png)
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Create plugin with custom rules?
+
+![Plugin funny gif](./assets/plugin.gif)
 </script></section><section data-markdown><script type="text/template">
-### Espree
+### Naming
+
+Create a folder with the following naming convention:
+
+- `eslint-plugin-<plugin-name>`
+- `@<scope>/eslint-plugin-<plugin-name>`
+- `@<scope>/eslint-plugin`
+</script></section><section data-markdown><script type="text/template">
+### Create a plugin
+
+The easiest way is to use Yeoman which has an [eslint-generator](https://www.npmjs.com/package/generator-eslint):
+
+- `yo eslint:plugin`
+
+```shell
+? What is your name? Danie Lazar
+? What is the plugin ID? alma
+? Type a short description of this plugin: It's just a test
+? Does this plugin contain custom ESLint rules? Yes
+? Does this plugin contain one or more processors? No
+```
+
+- `yo eslint:rule`
+
+```shell
+? What is your name? Daniel Lazar
+? Where will this rule be published? ESLint Plugin
+? What is the rule ID? no-alma-console
+? Type a short description of this rule: A console.log should not contain alma!
+? Type a short example of the code that will fail: console.log('alma');
+```
+</script></section><section data-markdown><script type="text/template">
+### Create a plugin
+
+![Folder structure](./assets/folder-structure.png)
+</script></section></section><section ><section data-markdown><script type="text/template">
+## How to write a rule and test?
+</script></section><section data-markdown><script type="text/template">
+### Let's look at the generated code
+
+tests/lib/rules/no-alma-console.js
+
+```js
+const ruleTester = new RuleTester();
+ruleTester.run("no-alma-console", rule, {
+  valid: [],
+
+  invalid: [
+    {
+      code: "console.log('alma');",
+      errors: [{ message: "Fill me in.", type: "Me too" }],
+    },
+  ],
+});
+```
 </script></section></section><section  data-markdown><script type="text/template">
 ## Example
 
