@@ -1,4 +1,4 @@
-# ESLint Plugins, rules and create your own
+# ESLint: Plugins, rules and create your own
 
 ---
 
@@ -155,7 +155,9 @@ The easiest way is to use Yeoman which has an [eslint-generator](https://www.npm
 
 ===
 
-## How to write a rule and test?
+## How to write a rule and test it?
+
+![Testing meme](./assets/testing.jpg)
 
 ---
 
