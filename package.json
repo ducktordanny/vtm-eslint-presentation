@@ -1,5 +1,6 @@
 {
-  "name": "presentation",
+  "name": "vtm-eslint-presentation",
+  "description": "What is ESLint, what are plugins and rules? Some popular plugins, etc. Create an own plugin",
   "version": "0.0.0",
   "author": "Daniel Lazar",
   "license": "MIT",
@@ -10,6 +11,7 @@
     "postinstall": "husky install"
   },
   "devDependencies": {
+    "eslint": "^8.51.0",
     "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "reveal-md": "^5.4.1"
