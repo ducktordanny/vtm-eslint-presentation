@@ -75,8 +75,8 @@ An npm module that can contain a set of ESLint rules, configurations, processors
 
 A common use case is to enforce best practices. E.g.:
 
-- [@angular-eslint/eslint-plugin](https://www.npmjs.com/package/@angular-eslint/eslint-plugin)
-- [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
+- [@angular-eslint/eslint-plugin](https://github.com/angular-eslint/angular-eslint#readme)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn#readme)
 
 ===
 
@@ -87,9 +87,9 @@ A common use case is to enforce best practices. E.g.:
 ### Parsers
 
 - AST (Abstract Syntax Tree)
-- [Espree](https://github.com/eslint/espree)
+- [Espree](https://github.com/eslint/espree#readme)
 - Custom parsers
-  - E.g. [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
+  - E.g. [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint#readme)
 
 ![Funny Tree](./assets/funny-tree.gif)
 
@@ -128,7 +128,7 @@ Create a folder with the following naming convention:
 
 ### Create a plugin
 
-The easiest way is to use Yeoman which has an [eslint-generator](https://www.npmjs.com/package/generator-eslint):
+The easiest way is to use Yeoman which has an [eslint-generator](https://github.com/eslint/generator-eslint#readme):
 
 - `yo eslint:plugin`
 
@@ -215,7 +215,7 @@ module.exports = {
 
 - Extended AST functionality
   - [CSS like selectors](https://eslint.org/docs/latest/extend/selectors#what-syntax-can-selectors-have)
-  - Functions for getting particular code parts (choose any [ESTree node type](https://github.com/estree/estree))
+  - Functions for getting particular code parts (choose any [ESTree node type](https://github.com/eslint/espree#readme))
 - [AST Explorer](https://astexplorer.net/) can be useful
 
 ---
