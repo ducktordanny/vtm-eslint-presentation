@@ -5,6 +5,7 @@
 ### Who Am I?
 
 - Software Engineer @ One Identity
+  - Working with Angular
 - Like to work on own project ideas
 
 ===
@@ -87,6 +88,8 @@ A common use case is to enforce best practices. E.g.:
 
 - AST (Abstract Syntax Tree)
 - [Espree](https://github.com/eslint/espree)
+- Custom parsers
+  - E.g. [@typescript-eslint/parser](https://www.npmjs.com/package/@typescript-eslint/parser)
 
 ![Funny Tree](./assets/funny-tree.gif)
 
@@ -117,8 +120,8 @@ return a
 
 Create a folder with the following naming convention:
 
-- `eslint-plugin-<plugin-name>`
-- `@<scope>/eslint-plugin-<plugin-name>`
+- `eslint-plugin-<plugin-id>`
+- `@<scope>/eslint-plugin-<plugin-id>`
 - `@<scope>/eslint-plugin`
 
 ---
@@ -212,7 +215,7 @@ module.exports = {
 
 - Extended AST functionality
   - [CSS like selectors](https://eslint.org/docs/latest/extend/selectors#what-syntax-can-selectors-have)
-  - Functions for getting particular code parts
+  - Functions for getting particular code parts (choose any [ESTree node type](https://github.com/estree/estree))
 - [AST Explorer](https://astexplorer.net/) can be useful
 
 ---
@@ -224,9 +227,11 @@ The create function's context object has a report function:
 ```js
 context.report({
   node,
-  messageId: "shouldNotContainAlma",
+  message: "You shall not pass!!!",
 });
 ```
+
+![Shall Not Pass gif](./assets/shall-not-pass.gif)
 
 ===
 
