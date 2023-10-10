@@ -1,27 +1,14 @@
-# Presentation
+# ESLint: Plugins, rules and create your own
 
-> Boilerplate for creating presentations with reveal-md
+> ESLint is used by lots of devs, though they might not know how it works in the background, so I'd like to show in a bit more details, and also present how we can create our own plugins and rules.
 
-## Install
+## Presentation
 
-Clone this repository, and that's it. Change it to your needs.
+The presentation is deployed to GitHub Pages and can be seen [here](https://ducktordanny.github.io/vtm-eslint-presentation/#/).
 
-Install dependencies: `yarn` or `yarn install`
+## Other
 
-## Usage
-
-The slides should be written inside the slides.md file, then run `yarn dev` to check it out (it will start it up in watch mode).
-
-To build your changes use `yarn build` it will create a dist folder that you use later.
-
-`yarn deploy` will take your dist folder and send it to GitHub Pages, so others can view it. Though if you create a repo from this template, there is a husky pre-push hook set up to deploy before every push, so you won't need to worry about doing this manually.
-
-For more details on how some other configurations work, like custom styling etc. you can check the reveal-md lib, as this repo is based on that. A few information though:
-
-- Edit `styles.css` for custom styles
-- Edit `reveal-md.json` and `reveal.json` for reveal.js configurations
-- Create your slides intside the `slides.md` file
-
-## Note
-
-This is just a template for future myself, but feel free to use it if you want.
+- Follow me on [GitHub](https://github.com/ducktordanny)
+- This repo was created by [my GitHub "presentation" template](https://github.com/ducktordanny/presentation) and using [reveal-md](https://github.com/webpro/reveal-md)
+- For the presentation I used the official [ESLint docs](https://eslint.org/docs/latest/)
+- Check out my own ESLint plugin: [eslint-plugin-ng-module-sort](https://github.com/ducktordanny/eslint-plugin-ng-module-sort)
